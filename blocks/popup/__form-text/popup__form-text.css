@@ -1,0 +1,8 @@
+.popup__form-text {
+    border: 0px;
+    outline: none !important;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+}

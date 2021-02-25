@@ -1,9 +1,11 @@
-.profile__subtitle {
+.profile__profession {
     max-width: 336px;
     font-size: 18px;
     line-height: 22px;
     font-weight: normal;
     margin: 0px;
     margin-top: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     overflow: hidden;
 }

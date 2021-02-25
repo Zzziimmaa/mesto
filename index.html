@@ -19,9 +19,9 @@
             <section class="profile">
                 <img class="profile__avatar" src="./image/iv-kysto.jpg" alt="">
                 <div class="profile__profile-info">
-                    <h1 class="profile__title">Жак-Ив Кусто</h1>
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
                     <button type="button" class="profile__edit-button"></button>
-                    <p class="profile__subtitle">Исследователь океана</p>
+                    <p class="profile__profession">Исследователь океана</p>
                 </div>
                 <button type="button" class="profile__add-button"></button>
             </section>
@@ -71,10 +71,29 @@
             </section>
         </main>
         <footer class="footer">
-            <h2 class="footer__copyright"> &copy; 2020 Mesto Russia</h2>
+            <h2 class="footer__copyright"> &copy; 2021 Mesto Russia</h2>
         </footer>
     </div>
-
+    <div class="popup">
+        <div class="popup__body">
+            <div class="popup__container">
+                <div class="popup__close-btn"></div>
+                <form class="popup__form" name="profile">
+                    <h2 class="popup__title">Редактировать профиль</h2>
+                    <fieldset class="popup__form-name">
+                        <input id="formName" type="text" name="name" class="popup__form-text" value="Жак-Ив Кусто">
+                        <div class="popup__line"></div>
+                    </fieldset>
+                    <fieldset class="popup__form-info">
+                        <input id="formJob" type="text" name="job" class="popup__form-text" value="Исследователь океана">
+                        <div class="popup__line"></div>
+                    </fieldset>
+                    <button type="submit" class="popup__submit-button" aria-disabled="false" autocomplete="off"><span class="popup__button-text">Сохранить</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
