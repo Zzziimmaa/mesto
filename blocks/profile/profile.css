@@ -1,10 +1,24 @@
 .profile {
     display: flex;
-    width: 880px;
+    max-width: 880px;
     margin: auto;
     margin-top: 40px;
     font-family: Inter;
     font-style: normal;
     color: #FFFFFF;
     align-items: center;
+}
+
+@media screen and (max-width:930px) {
+    .profile {
+        max-width: 585px;
+        padding: 0px auto;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .profile {
+        max-width: 282px;
+        flex-direction: column;
+    }
 }

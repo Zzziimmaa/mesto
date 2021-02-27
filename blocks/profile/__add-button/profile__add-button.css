@@ -8,9 +8,24 @@
     background-color: black;
     background-position: center;
     margin-left: 244px;
+    padding: 0px;
 }
 
 .profile__add-button:hover {
     cursor: pointer;
     opacity: 0.6;
+}
+
+@media screen and (max-width:930px) {
+    .profile__add-button {
+        margin-left: 27px;
+        width: 90px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .profile__add-button {
+        margin: 0px;
+        width: 282px;
+    }
 }

@@ -14,3 +14,10 @@
     opacity: 0.8;
     border-radius: 2px;
 }
+
+@media screen and (max-width:450px) {
+    .popup__submit-button {
+        width: 238px;
+        height: 46px;
+    }
+}
