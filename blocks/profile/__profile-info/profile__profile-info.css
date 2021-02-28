@@ -17,5 +17,6 @@
     .profile__profile-info {
         margin: 0px;
         justify-content: center;
+        margin-top: 26px;
     }
 }

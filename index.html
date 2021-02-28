@@ -13,7 +13,6 @@
     <div class="page">
         <header class="header">
             <img class="header__logo" src="./image/Vector.svg" alt="логотип Место">
-            <div class="header__line"></div>
         </header>
         <main class="content">
             <section class="profile">
@@ -28,42 +27,42 @@
             <section class="elements">
                 <div class="element">
                     <img class="element__img" src="./image/london-grid.jpg" alt="лондон мост">
-                    <div class="container">
+                    <div class="element__container">
                         <h3 class="element__title">Лондон</h3>
                         <button type="button" class="element__group"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__img" src="./image//Bali-Indonesia-grid.jpg" alt="океана дожь">
-                    <div class="container">
+                    <div class="element__container">
                         <h3 class="element__title">Бали</h3>
                         <button type="button" class="element__group"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__img" src="./image/Kerala-India-grid.jpg" alt="голубая морская вода">
-                    <div class="container">
+                    <div class="element__container">
                         <h3 class="element__title">Керала</h3>
                         <button type="button" class="element__group"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__img" src="./image/Rome-Italy-grid.jpg" alt="Рим">
-                    <div class="container">
+                    <div class="element__container">
                         <h3 class="element__title">Рим</h3>
                         <button type="button" class="element__group"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__img" src="./image/Morocco-grid.jpg" alt="белые стены">
-                    <div class="container">
+                    <div class="element__container">
                         <h3 class="element__title">Марокко</h3>
                         <button type="button" class="element__group"></button>
                     </div>
                 </div>
                 <div class="element">
                     <img class="element__img" src="./image/France-grid.jpg" alt="горы снег ">
-                    <div class="container">
+                    <div class="element__container">
                         <h3 class="element__title">Шамони-Мон-Блан</h3>
                         <button type="button" class="element__group"></button>
                     </div>
@@ -71,26 +70,20 @@
             </section>
         </main>
         <footer class="footer">
-            <h2 class="footer__copyright"> &copy; 2021 Mesto Russia</h2>
+            <p class="footer__copyright"> &copy; 2021 Mesto Russia</p>
         </footer>
     </div>
     <div class="popup">
         <div class="popup__body">
-            <div class="popup__container">
-                <div class="popup__close-btn"></div>
-                <form class="popup__form" name="profile">
-                    <h2 class="popup__title">Редактировать профиль</h2>
-                    <fieldset class="popup__form-name">
-                        <input id="formName" type="text" name="name" class="popup__form-text" value="Жак-Ив Кусто">
-                        <div class="popup__line"></div>
-                    </fieldset>
-                    <fieldset class="popup__form-info">
-                        <input id="formJob" type="text" name="job" class="popup__form-text" value="Исследователь океана">
-                        <div class="popup__line"></div>
-                    </fieldset>
-                    <button type="submit" class="popup__submit-button" aria-disabled="false"><span class="popup__button-text">Сохранить</span></button>
-                </form>
-            </div>
+            <form class="popup__form" name="profile">
+                <button type="button" class="popup__close-btn"></button>
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <fieldset class="popup__container">
+                    <input id="formName" type="text" name="name" class="popup__form-text " value="">
+                    <input id="formJob" type="text" name="job" class="popup__form-text" value="">
+                </fieldset>
+                <button type="submit" class="popup__submit-button" aria-disabled="false"><p class="popup__button-text">Сохранить</p></button>
+            </form>
         </div>
     </div>
     <script src="./script.js"></script>
