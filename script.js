@@ -1,6 +1,6 @@
 const popup = document.querySelector('.popup'); // окно попапа
 const profileEditButton = document.querySelector('.profile__edit-button'); // кнопка открытия попапа
-const popupCloseBtn = document.querySelector('.popup__close-btn'); // кнопка закрытия попапа
+const popupCloseBtn = document.querySelector('.popup__close'); // кнопка закрытия попапа
 
 const formElement = document.querySelector('.popup__form');
 const nameInput = document.querySelector('#formName');
@@ -162,7 +162,7 @@ popupImgClose.addEventListener('click', function() {
 });
 
 // добавить карточки 
-const popupForm = document.querySelector('.popup__add_card');
+const popupForm = document.querySelector('.popup__form_card');
 
 function addFormListiner(evt) {
     evt.preventDefault();
