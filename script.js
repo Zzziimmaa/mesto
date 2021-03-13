@@ -8,7 +8,7 @@ const jobInput = document.querySelector('#formJob');
 
 const newPopup = document.querySelector('.popup_card') // окно попапа добавления картинок
 const cardAddButton = document.querySelector('.profile__add-button'); // кнопка открытия попапа добаления картинок
-const cardCloseButton = document.querySelector('.popup_closecard'); // кнопка открытия попапа добаления картинок
+const cardCloseButton = document.querySelector('.popup__close_card'); // кнопка открытия попапа добаления картинок
 const popupEdit = document.querySelector('.popup_edit');
 
 
@@ -154,7 +154,7 @@ function popupBigImg(item) {
     openPopup(popupImg)
 }
 
-const popupImgClose = document.querySelector('.popup_closeimg'); //кнопка закрытия попапа с картинкой
+const popupImgClose = document.querySelector('.popup__close_img'); //кнопка закрытия попапа с картинкой
 
 popupImgClose.addEventListener('click', function() {
     closePopup(popupImg)
@@ -162,7 +162,7 @@ popupImgClose.addEventListener('click', function() {
 });
 
 // добавить карточки 
-const popupForm = document.querySelector('.popup_addcard');
+const popupForm = document.querySelector('.popup__add_card');
 
 function addFormListiner(evt) {
     evt.preventDefault();
