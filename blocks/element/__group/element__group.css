@@ -13,8 +13,3 @@
     cursor: pointer;
     opacity: 0.5;
 }
-
-.element__group:active {
-    background: url(../../../image/heart_button_active.svg);
-    transition: background 0s;
-}
