@@ -1,0 +1,35 @@
+.popup__container-img {
+    padding: 0px;
+    max-width: 816px;
+    background: none;
+    height: 540px;
+}
+
+@media screen and (max-width:890px) {
+    .popup__container-img {
+        width: 620px;
+        height: 410px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .popup__container-img {
+        width: 470px;
+        height: 311px;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .popup__container-img {
+        width: 333px;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .popup__container-img {
+        width: 240px;
+        height: 299px;
+        margin: 0px 40px 0px;
+    }
+}
