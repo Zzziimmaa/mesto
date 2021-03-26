@@ -6,13 +6,25 @@ const formElement = document.querySelector(".popup__form");
 const nameInput = document.querySelector("#formName");
 const jobInput = document.querySelector("#formJob");
 
-const newPopup = document.querySelector(".popup_card"); // окно попапа добавления картинок
+// окно попапа добавления картинок
 const cardAddButton = document.querySelector(".profile__add-button"); // кнопка открытия попапа добаления картинок
 const cardCloseButton = document.querySelector(".popup__close_card"); // кнопка открытия попапа добаления картинок
-const popupEdit = document.querySelector(".popup_edit");
-
 const profileName = document.querySelector('.profile__name');
 const profileProfession = document.querySelector('.profile__profession');
+
+
+const popupEdit = document.querySelector(".popup_edit");
+const newPopup = document.querySelector(".popup_card");
+const popupImg = document.querySelector(".popup_img");
+//закрытие попап в области overlay
+const closePopupInAnyArea = (evt) => {
+    if (!evt.target.closest('.popup__form')) {
+        closePopup(evt.target.closest('.popup'))
+    }
+};
+popupEdit.addEventListener('click', closePopupInAnyArea);
+newPopup.addEventListener('click', closePopupInAnyArea);
+popupImg.addEventListener('click', closePopupInAnyArea);
 
 
 // открыть попап
@@ -29,7 +41,9 @@ profileEditButton.addEventListener("click", function() {
     openPopup(popupEdit);
     nameInput.value = profileName.textContent;
     jobInput.value = profileProfession.textContent;
+
 });
+
 
 popupCloseBtn.addEventListener("click", function() {
     closePopup(popupEdit);
@@ -43,6 +57,7 @@ cardAddButton.addEventListener("click", function() {
 cardCloseButton.addEventListener("click", function() {
     closePopup(newPopup);
 });
+
 
 function formSubmitHandler(evt) {
     evt.preventDefault();
@@ -132,7 +147,7 @@ function renderCards() {
 }
 
 //попап большой картинки
-const popupImg = document.querySelector(".popup_img");
+
 
 // большая картинка
 function popupBigImg(item) {
@@ -167,3 +182,24 @@ function addFormListiner(evt) {
 }
 renderCards();
 popupForm.addEventListener("submit", addFormListiner);
+
+
+//закрытие попапа клавишей Esc 
+const closePopupEscKey = (evt) => {
+    const popup = document.querySelector('.popup_opened')
+    if (evt.key === 'Escape') {
+        closePopup(popup);
+    }
+};
+
+function openPopup(popup) {
+    popup.classList.add('popup_opened');
+    document.addEventListener('keydown', closePopupEscKey);
+};
+
+
+
+function closePopup(popup) {
+    popup.classList.remove('popup_opened');
+    document.addEventListener('keydown', closePopupEscKey);
+};

@@ -7,9 +7,17 @@
     line-height: 17px;
     color: #000000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin-bottom: 30px;
+    margin-bottom: 5px;
 }
 
 .popup__form-text:last-child {
     margin: 0px;
+}
+
+.popup__form-text_type_error {
+    border-bottom: 1px solid red;
+}
+
+.popup__form-text:invalid {
+    border-bottom: 1px solid red;
 }

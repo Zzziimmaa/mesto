@@ -43,12 +43,14 @@
     </div>
     <div class="popup popup_edit">
         <div class="popup__body">
-            <form class="popup__form" name="profile">
+            <form class="popup__form" name="profile" novalidate>
                 <button type="button" class="popup__close"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <fieldset class="popup__container">
-                    <input id="formName" type="text" name="name" class="popup__form-text " value="">
-                    <input id="formJob" type="text" name="job" class="popup__form-text" value="">
+                    <input id="formName" type="text" name="name" minlength="2" maxlength="40" required class="popup__form-text " value="">
+                    <span id="formName-error" class="popup__error "></span>
+                    <input id="formJob" type="text" name="job" minlength="2" maxlength="200" required class="popup__form-text" value="">
+                    <span id="formJob-error" class="popup__error "></span>
                 </fieldset>
                 <button type="submit" class="popup__submit-button" aria-disabled="false">Сохранить</button>
             </form>
@@ -56,14 +58,16 @@
     </div>
     <div class="popup popup_card">
         <div class="popup__body">
-            <form class="popup__form popup__form_card" name="new-place">
+            <form class="popup__form popup__form_card" name="new-place" novalidate>
                 <button type="button" class="popup__close popup__close_card"></button>
                 <h2 class="popup__title">Новое место</h2>
                 <fieldset class="popup__container">
-                    <input id="name" type="text" name="name" class="popup__form-text " placeholder="Название">
-                    <input id="link" type="text" name="job" class="popup__form-text" placeholder="Ссылка на картинку">
+                    <input id="name" type="text" name="name" class="popup__form-text" minlength="2" maxlength="30" required placeholder="Название">
+                    <span id="name-error" class="popup__error"></span>
+                    <input id="link" type="url" name="job" class="popup__form-text" required placeholder="Ссылка на картинку">
+                    <span id="link-error" class="popup__error"></span>
                 </fieldset>
-                <button type="submit" class="popup__submit-button popup__button-to-create" aria-disabled="false">Создать</button>
+                <button type="submit" class="popup__submit-button popup__button-to-create popup__submit-button_disabeld" aria-disabled="false">Создать</button>
             </form>
         </div>
     </div>
@@ -76,7 +80,9 @@
             </div>
         </div>
     </div>
+    <script src="./validate.js"></script>
     <script src="./script.js"></script>
+
 </body>
 
 </html>
