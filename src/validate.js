@@ -94,3 +94,18 @@ enableValidation({
     inputErrorClass: 'popup__input_type_error',
     errorClass: 'popup__error_visible'
 });
+
+
+// удаляет ошибки валидации при повторно открытии окна попапов
+const clearErrorElement = (formSelector) => {
+
+    const errorList = Array.from(formSelector.querySelectorAll('.popup__error'));
+    errorList.forEach((error) => {
+        error.classList.remove('popup__error_visible')
+    });
+
+    const errorInputList = Array.from(formSelector.querySelectorAll('.popup__form-text'));
+    errorInputList.forEach((error) => {
+        error.classList.remove('popup__form-text_type_error');
+    })
+};

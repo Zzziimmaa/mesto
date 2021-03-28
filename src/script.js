@@ -18,24 +18,14 @@ const popupSubmitButton = document.querySelector(".popup__submit-button");
 const cardsContainer = document.querySelector(".elements");
 const templateElement = document.querySelector(".template");
 
-// удаляет ошибки валидации при повторно открытии окна попапов
-const clearErrorElement = (formSelector) => {
 
-    const errorList = Array.from(formSelector.querySelectorAll('.popup__error'));
-    errorList.forEach((error) => {
-        error.classList.remove('popup__error_visible')
-    });
-
-    const errorInputList = Array.from(formSelector.querySelectorAll('.popup__form-text'));
-    errorInputList.forEach((error) => {
-        error.classList.remove('popup__form-text_type_error');
-    })
-}
 
 //закрытие попап в области overlay
 const closePopupInAnyArea = (evt) => {
     if (!evt.target.closest('.popup__form')) {
-        closePopup(evt.target.closest('.popup'))
+        closePopup(evt.target.closest('.popup'));
+        input.value = "";
+        link.value = "";
     }
 };
 popupEdit.addEventListener('click', closePopupInAnyArea);
@@ -53,7 +43,7 @@ popupCloseBtn.addEventListener("click", () => closePopup(popupEdit));
 
 // попап добавления карточек
 cardAddButton.addEventListener("click", function() {
-    invalidCreateButton(newPopup)
+    disableSubmitButton(newPopup)
     clearErrorElement(newPopup)
     openPopup(newPopup)
 
@@ -142,7 +132,7 @@ const formAddCard = document.querySelector(".popup__form_card");
 const input = formAddCard.querySelector("#name");
 const link = formAddCard.querySelector("#link");
 
-function addFormListiner(evt) {
+function submitAddCardForm(evt) {
     evt.preventDefault();
     const item = { name: input.value, link: link.value };
     const newTask = createCardDomNode(item);
@@ -153,7 +143,7 @@ function addFormListiner(evt) {
     closePopup(newPopup);
 }
 renderCards();
-formAddCard.addEventListener("submit", addFormListiner);
+formAddCard.addEventListener("submit", submitAddCardForm);
 
 
 //закрытие попапа клавишей Esc 
@@ -177,7 +167,7 @@ function closePopup(popup) {
 };
 
 // функция при повторном открытии попапа добавления карточки делает кнопку СОЗДАТЬ не активной до момента пока не будут введены название и URL
-function invalidCreateButton(newPopup) {
+function disableSubmitButton(newPopup) {
     const saveButon = newPopup.querySelector('.popup__button-to-create');
     saveButon.classList.add('popup__submit-button_disabeld');
     saveButon.setAttribute('disabled', true);
