@@ -17,7 +17,3 @@
 .popup__form-text_type_error {
     border-bottom: 1px solid red;
 }
-
-.popup__form-text:invalid {
-    border-bottom: 1px solid red;
-}

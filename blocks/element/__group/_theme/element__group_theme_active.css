@@ -1,4 +1,3 @@
 .element__group_theme_active {
     background: url(../../../../image/heart_button_active.svg);
-    transition: background 0s;
 }

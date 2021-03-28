@@ -26,16 +26,16 @@ const showInputError = (formSelector, inputSelector) => {
     const errorClass = formSelector.querySelector(`#${inputSelector.id}-error`);
     inputSelector.classList.add('popup__form-text_type_error');
     errorClass.textContent = inputSelector.validationMessage;
-    errorClass.classList.add('.popup__error_visible');
+    errorClass.classList.add('popup__error_visible');
 
 
 };
 
 // Функция, которая удаляет класс с ошибкой
 const hideInputError = (formSelector, inputSelector) => {
-    inputSelector.classList.remove('popup__form-text_type_error');
     const errorClass = formSelector.querySelector(`#${inputSelector.id}-error`);
-    errorClass.classList.remove('.popup__error_visible');
+    inputSelector.classList.remove('popup__form-text_type_error');
+    errorClass.classList.remove('popup__error_visible');
     errorClass.textContent = '';
 };
 
