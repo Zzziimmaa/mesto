@@ -18,10 +18,7 @@ const popupSubmitButton = document.querySelector(".popup__submit-button");
 const cardsContainer = document.querySelector(".elements");
 const templateElement = document.querySelector(".template");
 
-
-
-
-
+// удаляет ошибки валидации при повторно открытии окна попапов
 const clearErrorElement = (formSelector) => {
 
     const errorList = Array.from(formSelector.querySelectorAll('.popup__error'));
